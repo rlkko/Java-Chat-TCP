@@ -1,4 +1,4 @@
-package pt.ua.estga.project4.ClientComponents;
+package rikkoRicardo.tcp.chat.ClientComponents;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -104,7 +104,7 @@ public class MClientLogicInterface {
 
                         if (!tmp.equals("To")) {
                             JsonLoader.LoadFile();
-                            if (tmp.equals("lp")) {
+                            if (tmp.equals("Global")) {
                                 JsonLoader.addMessage(tmp, tmp, recivedMessage);
                             } else {
                                 JsonLoader.addMessage(tmp, this.username, recivedMessage);

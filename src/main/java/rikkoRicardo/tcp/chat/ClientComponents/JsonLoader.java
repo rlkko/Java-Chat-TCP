@@ -1,4 +1,4 @@
-package pt.ua.estga.project4.ClientComponents;
+package rikkoRicardo.tcp.chat.ClientComponents;
 
 import com.nimbusds.jose.shaded.gson.Gson;
 import java.io.BufferedReader;

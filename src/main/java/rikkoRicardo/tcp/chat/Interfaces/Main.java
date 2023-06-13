@@ -1,6 +1,6 @@
-package pt.ua.estga.project4.Interfaces;
+package rikkoRicardo.tcp.chat.Interfaces;
 
-import pt.ua.estga.project4.ServerComponents.Server;
+import rikkoRicardo.tcp.chat.ServerComponents.Server;
 import java.io.IOException;
 import java.net.BindException;
 import java.net.ServerSocket;

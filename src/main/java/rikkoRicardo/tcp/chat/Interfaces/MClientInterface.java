@@ -1,7 +1,7 @@
-package pt.ua.estga.project4.Interfaces;
+package rikkoRicardo.tcp.chat.Interfaces;
 
-import pt.ua.estga.project4.ClientComponents.MClientLogInterface;
-import pt.ua.estga.project4.ClientComponents.MClientLogicInterface;
+import rikkoRicardo.tcp.chat.ClientComponents.MClientLogInterface;
+import rikkoRicardo.tcp.chat.ClientComponents.MClientLogicInterface;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import pt.ua.estga.project4.ClientComponents.JsonLoader;
+import rikkoRicardo.tcp.chat.ClientComponents.JsonLoader;
 
 public class MClientInterface extends javax.swing.JFrame {
 
@@ -69,7 +69,7 @@ public class MClientInterface extends javax.swing.JFrame {
             this.setEnabled(false);
 
             //Setup LP element
-            UserModel.addElement("lp");
+            UserModel.addElement("Global");
 
             //Ask for email
             String username;
@@ -81,7 +81,7 @@ public class MClientInterface extends javax.swing.JFrame {
             client.listen(messageModel, UserModel);
 
             //Set title
-            this.setTitle("ChatClient[host:" + (ip.isBlank() ? "localhost" : ip) + "] - " + client.getUsername() + ")");
+            this.setTitle("ChatClient[host:" + ip + "] - " + client.getUsername() + ")");
             this.setEnabled(true);
 
         } catch (IOException e) {
@@ -125,7 +125,7 @@ public class MClientInterface extends javax.swing.JFrame {
         lista.setBackground(new java.awt.Color(204, 204, 204));
         lista.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lista.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "lp" };
+            String[] strings = { "Global" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -254,7 +254,7 @@ public class MClientInterface extends javax.swing.JFrame {
                 return;
             }
 
-            if (value.equals("lp")) {
+            if (value.equals("Global")) {
                 JsonLoader.LoadFile();
                 ArrayList<String> listaR = JsonLoader.getMessagesChat(value, value);
                 for (String s : listaR) {

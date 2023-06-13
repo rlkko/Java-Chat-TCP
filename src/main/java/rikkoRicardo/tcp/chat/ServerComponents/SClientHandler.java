@@ -1,4 +1,4 @@
-package pt.ua.estga.project4.ServerComponents;
+package rikkoRicardo.tcp.chat.ServerComponents;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -90,8 +90,8 @@ public class SClientHandler implements Runnable {
 
                 if (messageStructure.length - 1 != 0) {
 
-                    if (messageStructure[0].equals("message:lp")) {
-                        broadCastMessage("lp: " + message);
+                    if (messageStructure[0].equals("message:Global")) {
+                        broadCastMessage("Global: " + message);
                     }
 
                     if (incomingMessage.split(":")[0].equals("message")) {

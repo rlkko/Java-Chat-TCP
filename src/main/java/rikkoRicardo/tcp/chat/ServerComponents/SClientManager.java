@@ -1,4 +1,4 @@
-package pt.ua.estga.project4.ServerComponents;
+package rikkoRicardo.tcp.chat.ServerComponents;
 
 import java.io.*;
 import java.util.ArrayList;

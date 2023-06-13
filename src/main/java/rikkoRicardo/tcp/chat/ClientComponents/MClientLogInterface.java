@@ -1,4 +1,4 @@
-package pt.ua.estga.project4.ClientComponents;
+package rikkoRicardo.tcp.chat.ClientComponents;
 
 import javax.swing.DefaultListModel;
 
